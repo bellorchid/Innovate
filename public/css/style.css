@@ -1,0 +1,303 @@
+body {
+    padding: 0px 0;
+    background: url('../images/background.jpg');
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.tags {
+    margin-left: 18px;
+    position: relative;
+    top: -18px;
+    left: 50px;
+    color: #bdc0ba;
+}
+
+.icon {
+    width: 64px;
+    border-radius: 50%;
+}
+
+.students-index h3, .students-list h3, .student h3 {
+    display: inline-block;
+}
+
+.tag {
+    margin-left: 8px;
+
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+}
+/* 首页 */
+/* 滚动新闻 */
+.carousel {
+    margin-bottom: 50px;
+    height: 400px;
+    background-color: #000000;
+}
+
+.carousel .item {
+    height: 400px;
+    background-color: #000000;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel-caption {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 2em;
+}
+
+/* 学生简介 */
+.students-index {
+    margin-bottom: 50px;
+}
+
+.students-index .student-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #cccccc;
+    background-color: #eeeeee;
+}
+
+.student-type {
+    min-height: 300px;
+}
+
+.student-single {
+    min-height: 400px;
+}
+.students-list-a {
+    margin-bottom: 20px;
+}
+
+/* 项目简介 */
+.projects-index {
+    margin-bottom: 50px;
+}
+
+.projects-index .project-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #cccccc;
+    background-color: #eeeeee;
+}
+
+.projects-list-a {
+    margin-bottom: 20px;
+}
+
+/* 版权信息 */
+footer {
+    text-align: center;
+}
+
+/* 学生列表页 */
+.students-list {
+    padding-top: 20px;
+}
+
+.students-list {
+    margin-bottom: 50px;
+}
+
+.students-list .student-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #cccccc;
+    background-color: #eeeeee;
+}
+
+
+/* 学生详情页 */
+/* 学生详细信息 */
+.student {
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+.student-item1 {
+    min-height: 500px;
+}
+
+
+.student .student-item, .student-project {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #cccccc;
+    background-color: #ffffff;
+}
+
+.header {
+    min-height: 100%;
+}
+.app-footer {
+    position: relative;
+    bottom: 10000;
+    min-width: 100%;
+    height: 60px;
+    border-top: 1px solid rgb(225,225,225);
+    background-color: rgb(246,246,246);
+}
+/*
+/*.inno-header {
+    background-color: #2196f3;
+
+}*/
+.item {
+    padding: 0;
+    margin: 0;
+}
+
+.show-personal {
+    background-color: white;
+    height:440px;
+    width: 380px; 
+    position: relative;
+    left: 20px;
+}
+
+.ico-personal {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    padding: 10px;
+    border-radius: 50px 50px;
+}
+
+.name-personal {
+    position: relative;
+    left: 90px;
+    top: -95px;
+}
+
+.tag-personal {
+    position: relative;
+    top: -110px;
+    left: 93px;
+    font-size: 16px;
+    color: #bdc0ba;
+}
+
+.img-personal {
+    width: 320px;
+    height: 300px;
+    position: relative;
+    top: -110px;
+    left: 30px;
+}
+
+.description-personal {
+    position: relative;
+    bottom: 95px;
+    left: 30px;
+    width: 320px;
+    height: 15px;
+}
+
+.after-box {
+    display: inline-block;
+    padding: 20px;
+    margin: 0 auto;
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.profile-personal {
+    padding:30px; 
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    /*background-color: rgb(246,246,246);*/
+}
+.personal-project {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    float: right;
+}
+
+.icon-profile {
+    width: 70px;
+    height: 70px;
+
+}
+
+.photo-profile {
+    width: 440px;
+    height: 350px;
+}
+
+.project-box {
+    margin: 30px;
+    border: 5px solid rgb(249,249,249);
+    /*#bdc0ba*/
+    background-color:  rgb(249,249,249);
+}
+.name-detail {
+    position: relative;
+    top: -100px;
+    left: 90px;
+}
+
+.tag-detail {
+    position: relative;
+    top: -100px;
+    left: 93px;
+    color: #95949a;
+    font-size: 17px;
+}
+
+.personal-detail {
+    position: relative;
+    top: -90px;
+    left: 35px;
+}
+
+.profiles {
+    background-color: #fff;
+    margin: 60px auto;
+    height: 100%;
+    overflow: auto;
+
+}
+
+.personal-button {
+    position: relative;
+    left: 40%;
+}
+
+.personal-show {
+    padding: 20px;
+
+}
+
+.personal-area {
+    position: relative;
+    top: -40px;
+    left: 170px;
+}
+
+.text-area {
+    width: 700px;
+    min-height: 190px;
+}
