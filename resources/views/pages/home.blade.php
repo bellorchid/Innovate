@@ -90,7 +90,7 @@
                     @foreach ($projects as $project)
                     <div class="col-md-12">
                         <div class="project-item">
-                            <a href="/projects/{{ $project->id }}"><h3>{{ $project->name }}</h3></a>
+                            <a href="{{url('projects/'.$project->id)}}"><h3>{{ $project->name }}</h3></a>
                         </div>
                     </div>
                     @endforeach
@@ -106,7 +106,7 @@
                     @foreach ($events as $event)
                     <div class="col-md-12">
                         <div class="project-item">
-                            <a href="projects/{{ $project->id }}"><h3>{{ $event->title }}</h3></a>
+                            <a href=""><h3>{{ $event->title }}</h3></a>
                         </div>
                     </div>
                     @endforeach
