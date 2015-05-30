@@ -11,7 +11,7 @@
             <div class="col-md-4">
                 <div class="student-item student-single">
                     <a href="{{url('/students/'.$student->id)}}"><img class="icon" src="{{ $student->icon}}" /> <h3>{{ $student->name }}</h3></a>
-                    </br></br></br>
+                    </br></br>
                     <a href="{{url('/students/'.$student->id)}}"><img class="photo" src="{{ $student->photo}}" /></a>
                 </div>
             </div>

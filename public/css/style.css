@@ -21,6 +21,7 @@ a:hover {
 
 .icon {
     width: 64px;
+    height: 64px;
     border-radius: 50%;
 }
 
@@ -35,7 +36,8 @@ a:hover {
 
 .photo {
     width: 100%;
-    height: 100%;
+    height: 75%;
+    display: block;
 }
 /* 首页 */
 /* 滚动新闻 */
@@ -75,11 +77,11 @@ a:hover {
 }
 
 .student-type {
-    min-height: 300px;
+    height: 300px;
 }
 
 .student-single {
-    min-height: 400px;
+    height: 460px;
 }
 .students-list-a {
     margin-bottom: 20px;
@@ -182,6 +184,7 @@ footer {
     position: relative;
     padding: 10px;
     border-radius: 50px 50px;
+    display: block;
 }
 
 .name-personal {

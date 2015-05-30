@@ -150,7 +150,7 @@ class StudentController extends Controller {
       Image::make(Input::file('icon'))->resize(80, 80)->save('./images/icons/'.Auth::user()->id.'.jpg');
     }
     if(Input::hasFile('photo')) {
-      Image::make(Input::file('photo'))->resize(400, 300)->save('./images/photos/'.Auth::user()->id.'.jpg');
+      Image::make(Input::file('photo'))->resize(338, 329)->save('./images/photos/'.Auth::user()->id.'.jpg');
     }
     $student->icon = url('images/icons/'.$student->id.'.jpg');
     $student->photo = url('images/photos/'.$student->id.'.jpg');
