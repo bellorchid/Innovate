@@ -29,7 +29,7 @@
 						  	<div class="form-group">
 						    	<label for="inputName" class="col-sm-2 control-label">项目名称:</label>
 						    	<div class="col-sm-10">
-						      	<input type="email" name="name"  class="form-control" id="inputName" placeholder="项目名称">
+						      	<input type="text" name="name"  class="form-control" id="inputName" placeholder="项目名称">
 						    	</div>
 						  	</div>
 
