@@ -180,4 +180,11 @@ class StudentController extends Controller {
     return response()->json(['name' => 'Abigail', 'state' => 'CA']);
   }
 
+  public function pass()
+  {
+    $student = Auth::user()->id;
+    $student->password = $request;
+    $student->save();
+  }
+
 }
