@@ -147,13 +147,13 @@ class StudentController extends Controller {
   {
     $student = Student::where('id',Auth::user()->id)->first();
     if(Input::hasFile('icon')) {
-      Image::make(Input::file('icon'))->resize(80, 80)->save('./images/icons/'.Auth::user()->id.'.jpg');
+      Image::make(Input::file('icon'))->resize(80, 80)->save('../../images/icons/'.Auth::user()->id.'.jpg');
     }
     if(Input::hasFile('photo')) {
-      Image::make(Input::file('photo'))->resize(338, 329)->save('./images/photos/'.Auth::user()->id.'.jpg');
+      Image::make(Input::file('photo'))->resize(338, 329)->save('../../images/photos/'.Auth::user()->id.'.jpg');
     }
-    $student->icon = url('images/icons/'.$student->id.'.jpg');
-    $student->photo = url('images/photos/'.$student->id.'.jpg');
+    $student->icon = url('../../images/icons/'.$student->id.'.jpg');
+    $student->photo = url('../../images/photos/'.$student->id.'.jpg');
     $student->save();
     session()->flash('message','个人信息修改成功');
     return Redirect::route('stu_home');
