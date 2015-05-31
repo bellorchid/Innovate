@@ -69,7 +69,10 @@ Route::post('image/update', [
 // -----------------  Android Api -------------------------
 
 Route::get('/android',[
-	'as' => 'androidAPI','uses' => 'StudentController@index']);
+	'as' => 'Student','uses' => 'StudentController@index']);
+
+Route::get('/table',[
+    'as' => 'table','uses' => 'ProjectController@table']);
 
 
 

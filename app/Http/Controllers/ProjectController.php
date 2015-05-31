@@ -87,4 +87,13 @@ class ProjectController extends Controller {
 		session()->flash('message','项目信息修改成功！');
 		return Redirect::route('stu_home');
 	}
+
+	public function table()
+	{
+		$projects = Project::all();
+		// $students = Project::find($projects->id)->students;
+		return view('projects.table')->withProject($projects);
+	}
 }
+
+
