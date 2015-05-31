@@ -19,7 +19,7 @@
                     </br>
                     <li>手机号: {{ $student->tel }}</li>
                     </br>
-                    <li>GitHub: <a href="{{ $student->github }}">{{ $student->github }}</a></li>
+                    <li>GitHub: <a href="{{ $student->github }}" target="_black">{{ $student->github }}</a></li>
                     <hr class="divider" />
                     <h4>个人详细介绍:</h4><p>{{ $student->resume }}</p>
                 </div>
