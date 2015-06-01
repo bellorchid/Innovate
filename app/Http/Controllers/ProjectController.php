@@ -88,6 +88,11 @@ class ProjectController extends Controller {
 		return Redirect::route('stu_home');
 	}
 
+	public function api_projects()
+	{
+		$projects = Project::all();
+		return json_encode($projects);`
+	}
 	public function table()
 	{
 		$projects = Project::all();

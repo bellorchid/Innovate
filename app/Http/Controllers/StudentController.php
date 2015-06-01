@@ -196,7 +196,7 @@ class StudentController extends Controller {
   public function api_student($id)
   {
     $detail = Student::find($id);
-    return $detail->toJson();
+    return json_encode($detail);
   }
 
 }
