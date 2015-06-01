@@ -15,7 +15,7 @@
 						  	<div class="form-group">
 						    	<label for="inputId" class="col-sm-2 control-label">项目编号:</label>
 						    	<div class="col-sm-10">
-						      	<input type="email" name="id" value="{{$project->id}}" class="form-control"  id="inputId" placeholder="默认编号，不可更改" readonly>
+						      	<input type="text" name="id" value="{{$project->id}}" class="form-control"  id="inputId" placeholder="默认编号，不可更改" readonly>
 						    	</div>
 						  	</div>
 
@@ -29,7 +29,7 @@
 						  	<div class="form-group">
 						    	<label for="inputName" class="col-sm-2 control-label">项目名称:</label>
 						    	<div class="col-sm-10">
-						      	<input type="email" name="name" value="{{$project->name}}" class="form-control" id="inputName" placeholder="项目名称">
+						      	<input type="text" name="name" value="{{$project->name}}" class="form-control" id="inputName" placeholder="项目名称">
 						    	</div>
 						  	</div>
 

@@ -94,6 +94,8 @@ class ProjectController extends Controller {
 		// $students = Project::find($projects->id)->students;
 		return view('projects.table')->withProject($projects);
 	}
+
+
 }
 
 

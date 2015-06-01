@@ -187,4 +187,16 @@ class StudentController extends Controller {
     $student->save();
   }
 
+  public function api_students()
+  {
+    $students = Student::all();
+    return $students->toJson();
+  }
+
+  public function api_student($id)
+  {
+    $detail = Student::find($id);
+    return $detail->toJson();
+  }
+
 }
