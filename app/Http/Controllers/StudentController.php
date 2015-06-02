@@ -17,8 +17,8 @@ use Input;
 use Image;
 use Storage;
 //七牛引入文件
-use Qiniu\Auth;
-use Qiniu\Storage\UploadManager;
+// use Qiniu\Auth;
+// use Qiniu\Storage\UploadManager;
 class StudentController extends Controller {
 
   //非登录用户显示学生纵览页
