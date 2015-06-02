@@ -16,6 +16,9 @@ use App\Project;
 use Input;
 use Image;
 use Storage;
+//七牛引入文件
+use Qiniu\Auth;
+use Qiniu\Storage\UploadManager;
 class StudentController extends Controller {
 
   //非登录用户显示学生纵览页
@@ -198,5 +201,33 @@ class StudentController extends Controller {
     $detail = Student::find($id);
     return json_encode($detail);
   }
+
+  // public function upImage()
+  // {
+
+  //   $accessKey = '<YOUR_APP_ACCESS_KEY>';
+  //   $secretKey = '<YOUR_APP_SECRET_KEY>';
+  //   $auth = new Auth($accessKey, $secretKey);
+
+  //   $bucket = 'Bellorchid';
+
+  //   // 设置put policy的其他参数, 上传回调
+  //   //$opts = array(
+  //   //          'callbackUrl' => 'http://www.callback.com/',  
+  //   //          'callbackBody' => 'name=$(fname)&hash=$(etag)'
+  //   //      );
+    
+
+  //   $token = $auth->uploadToken($bucket, null, 3600, $opts);
+  //   $uploadMgr = New UploadManager();
+
+  //   list($ret, $err) = $uploadMgr->putFile($token, null, __file__);
+  //   echo "\n====> putFile result: \n";
+  //   if ($err !== null) {
+  //       var_dump($err);
+  //   } else {
+  //       var_dump($ret);
+  //   }
+  // }
 
 }
