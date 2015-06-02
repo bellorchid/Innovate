@@ -217,6 +217,7 @@ class StudentController extends Controller {
     $blog->address = $request->address;
     $blog->student_id = Auth::user()->id;
     $blog->save();
+    session()->flash('message','成功!!');
     return Redirect::route('stu_home');
 
   }

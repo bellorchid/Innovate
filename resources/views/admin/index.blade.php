@@ -55,7 +55,7 @@
 
                     </div>
                     <div class="project-box">            
-                        <h2>发表的博文</h2>
+                        <h2>发表的博文&nbsp <small><a href="{{ url('blog/add')}}"><span class="glyphicon glyphicon-plus" aria-hidden="true">新增博客</span></a></small></h2>
                         <ul>
                             @foreach($blog as $blogs)
                             <li><a href="{{ $blogs->address}}" target="_blank">{{$blogs->title}}</a></li>
