@@ -91,8 +91,9 @@ class ProjectController extends Controller {
 	public function api_projects()
 	{
 		$projects = Project::all();
-		return json_encode($projects);`
+		return json_encode($projects);
 	}
+	
 	public function table()
 	{
 		$projects = Project::all();
@@ -102,5 +103,8 @@ class ProjectController extends Controller {
 
 
 }
+
+
+
 
 
