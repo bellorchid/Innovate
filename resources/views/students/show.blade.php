@@ -34,6 +34,17 @@
                     @endforeach
                     </ul>
                 </div>
+
+                <div class="student-project">
+                    <h3>分享的博客</h3>
+                    <hr class="divider" />
+                    <ul>
+                    @foreach($blog as $blogs)
+                        <p><a href="{{ $blogs->address }}" target="_blank">{{ $blogs->title }}</a></p>
+                    @endforeach
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>

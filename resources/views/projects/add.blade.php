@@ -11,14 +11,6 @@
 						<h1 align="center">新建项目</h1>
 						{!! Form::open(['url' => '/project/insert', 'class' => 'form-horizontal', 'role' => 'form']) !!}
 
-
-						  	<div class="form-group">
-						    	<label for="inputId" class="col-sm-2 control-label">项目编号:</label>
-						    	<div class="col-sm-10">
-						      	<input type="email" name="id" value="{{$project->id}}" class="form-control"  id="inputId" placeholder="默认编号，不可更改" readonly>
-						    	</div>
-						  	</div>
-
 						  	<div class="form-group">
 						    	<label for="inputName" class="col-sm-2 control-label">项目成员:</label>
 						    	<div class="col-sm-10">

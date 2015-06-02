@@ -80,7 +80,12 @@ Route::get('api_projects', [
 Route::get('/table',[
     'as' => 'table','uses' => 'ProjectController@table']);
 
+//---------------- Blog Route ------------------------------
 
+Route::get('/blog/add', [
+    'as' => 'add_blog','uses' => 'StudentController@blog_add']);
+Route::post('/blog/update', [
+    'as' => 'update_blog', 'uses' => 'StudentController@blog_update']);
 
 
 // -----------------  test -------------------------

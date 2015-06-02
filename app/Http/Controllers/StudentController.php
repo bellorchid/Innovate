@@ -13,6 +13,7 @@ use App\Student;
 use App\StudentDetail;
 use App\Tag;
 use App\Project;
+use App\Blog;
 use Input;
 use Image;
 use Storage;
@@ -35,7 +36,8 @@ class StudentController extends Controller {
 		$student = Student::find($id);
 		$tags = $student->tags;
 		$projects = $student->projects;
-        return view('students.show')->withStudent($student)->withTitle("实验班成员");
+    $blogs = Student::find($student->id)->blogs;        
+    return view('students.show')->withStudent($student)->withTitle("实验班成员")->withBlog($blogs);
 	}
 
   //显示登陆页界面
@@ -96,7 +98,8 @@ class StudentController extends Controller {
       // $id = $student->id;
       // $projects = Project::all();
       $projects = Student::find($student->id)->projects;
-      return view('admin.index')->withTitle("个人页面")->withStudent($student)->withProject($projects);
+      $blogs = Student::find($student->id)->blogs;
+      return view('admin.index')->withTitle("个人页面")->withStudent($student)->withProject($projects)->withBlog($blogs);
 
     }
   }
@@ -200,6 +203,22 @@ class StudentController extends Controller {
   {
     $detail = Student::find($id);
     return json_encode($detail);
+  }
+
+  public function blog_add()
+  {
+    return view('admin.blog')->withTitle('添加博客');
+  }
+
+  public function blog_update(Request $request)
+  {
+    $blog = new Blog;
+    $blog->title = $request->title;
+    $blog->address = $request->address;
+    $blog->student_id = Auth::user()->id;
+    $blog->save();
+    return Redirect::route('stu_home');
+
   }
 
   // public function upImage()

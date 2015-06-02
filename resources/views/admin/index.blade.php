@@ -57,7 +57,9 @@
                     <div class="project-box">            
                         <h2>发表的博文</h2>
                         <ul>
-
+                            @foreach($blog as $blogs)
+                            <li><a href="{{ $blogs->address}}" target="_blank">{{$blogs->title}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- Todo -->

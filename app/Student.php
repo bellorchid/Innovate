@@ -54,6 +54,10 @@ class Student extends Model implements AuthenticatableContract, CanResetPassword
         return $this->belongsToMany('App\Project');
     }
 
+    public function blogs()
+    {
+        return $this->hasMany('App\Blog');
+    }
 
 
 

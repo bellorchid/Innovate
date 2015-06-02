@@ -67,23 +67,21 @@ class ProjectController extends Controller {
 	public function add_project()
 	{
 		$student = Auth::user();
-		$project = new Project;
-		$project->save();
 
-		return view('projects.add')->withTitle('新增项目')->withStudent($student)->withProject($project);
+		return view('projects.add')->withTitle('新增项目')->withStudent($student);
 	}
 
 	public function insert_project(Request $request)
 	{
 		$student = Auth::user();
-		$projects = Project::where('id', $request->id)->first();
+		$projects = new Project;
 		$projects->name = $request->name;
 		$projects->address = $request->address;
 		$projects->demo = $request->demo;
 		$projects->abstract = $request->abstract;
 		$projects->detail = $request->detail;
 		$projects->save();
-		$student->projects()->attach($request->id);
+		$student->projects()->attach($projects->id);
 		session()->flash('message','项目信息修改成功！');
 		return Redirect::route('stu_home');
 	}
@@ -93,13 +91,14 @@ class ProjectController extends Controller {
 		$projects = Project::all();
 		return json_encode($projects);
 	}
-	
+
 	public function table()
 	{
 		$projects = Project::all();
 		// $students = Project::find($projects->id)->students;
 		return view('projects.table')->withProject($projects);
 	}
+
 
 
 }
