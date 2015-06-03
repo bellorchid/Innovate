@@ -75,7 +75,10 @@ Route::get('/api_student/{user_id}', [
     'as' => 'Student_detail', 'uses' => 'StudentController@api_student']);
 
 Route::get('api_projects', [
-    'as' => 'Project', 'uses' => 'ProjectController@api_projects']);
+    'as' => 'projects', 'uses' => 'ProjectController@api_projects']);
+
+Route::get('api_project/{project_id}', [
+    'as' => 'project', 'uses' => 'ProjectController@api_project']);
 
 Route::get('/table',[
     'as' => 'table','uses' => 'ProjectController@table']);
