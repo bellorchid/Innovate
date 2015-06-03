@@ -25,3 +25,60 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+
+# API 文档
+
+<!-- create time: 2015-06-01 10:12:28  -->
+
+<!-- This file is created from $MARBOO_HOME/.media/starts/default.md
+本文件由 $MARBOO_HOME/.media/starts/default.md 复制而来 -->
+###网站域名：bellorchid.xyz
+
+**Students：所有学生的信息**
+
+```
+Method:GET
+
+请求地址：/api_students
+
+字段：学号(id),姓名(name),头像url地址(icon),个人照片url地址(photo),邮箱(email),电话(tel),技术标签(tags),详细介绍(resume);
+```
+
+**Student Details**
+
+```
+Method:GET
+
+请求地址：/api_student/{user_id} 
+
+需要参数：user_id
+
+字段：学号(id),姓名(name),头像url地址(icon),个人照片url地址(photo),邮箱(email),电话(tel),技术标签(tags),详细介绍(resume);
+
+```
+
+**Projects**
+
+```
+Method:GET
+
+请求地址：/api_projects
+
+需要参数：无
+
+字段：项目编号(id),项目名称(name),项目地址(address),演示地址(demo),项目一句话介绍(abstract),项目详细介绍(detail);
+```
+
+**Project detail**
+
+```
+Method:GET
+
+请求地址：/api_project/{project_id}
+
+需要参数：project_id
+
+字段：项目编号(id),项目名称(name),项目地址(address),演示地址(demo),项目一句话介绍(abstract),项目详细介绍(detail),项目成员（添加后格式有问题，暂时不提供）;
+```
