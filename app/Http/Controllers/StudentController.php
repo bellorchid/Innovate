@@ -222,6 +222,7 @@ class StudentController extends Controller {
 
   }
 
+
   // public function upImage()
   // {
 
