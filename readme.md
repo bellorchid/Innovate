@@ -38,7 +38,7 @@ Method:GET
 
 需要参数：无
 
-字段：项目编号(id),项目名称(name),项目地址(address),演示地址(demo),项目一句话介绍(abstract),项目详细介绍(detail);
+字段：项目编号(id),项目名称(name),项目地址(address),演示地址(demo),项目一句话介绍(abs),项目详细介绍(detail),项目成员(members);
 ```
 
 **Project detail**
@@ -52,7 +52,6 @@ Method:GET
 
 字段:项目名称(name),项目地址(address),演示地址(demo),项目一句话介绍(abs),项目详细介绍(detail),项目成员（members，这是一个二维数组转化成的json，一般不需要进一步处理就可以使用）;
 ```
-
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
