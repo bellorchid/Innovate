@@ -89,19 +89,29 @@ class ProjectController extends Controller {
 	public function api_projects()
 	{
 		$projects = Project::all();
-		// $tmp = json_encode($projects); 
-		// $data = json_decode($tmp);
-		// foreach ($projects->id as $id) {
-		// 	$project = Project::find($id);
-		// 	$json_project = json_encode($project);
-		// 	$student = Project::find($id)->students;
-		// 	$json_student = json_encode($student->email);
-		// 	$arr = array(
-		// 		json_decode($json_project,true),
-		// 		json_decode($json_student,true));
-		// 		print_r($arr);
-		// }
-		return json_encode($projects);
+
+		$j =0;
+		foreach ($projects as $project) {
+			$student = Project::find($project->id)->students;
+			$i =0;
+			$arrs = ['0'=>''];
+			foreach ($student as $members) {
+
+				$arrs[$i] = $members->name;
+				$i++;
+			}
+			$arr = ['id' => '','name'=>'','address'=>'','demo'=>'','abs'=>'','detail'=>'','members'=>''];
+			$arr['id'] = $project->id;
+			$arr['name']= $project->name;
+			$arr['address'] = $project->address;
+			$arr['demo'] = $project->demo;
+			$arr['abs'] = $project->abstract;
+			$arr['detail'] = $project->detail;
+			$arr['members'] = $arrs;
+			$arr_list[$j] = $arr;
+			$j++;
+		}
+		return json_encode($arr_list);
 
 	}
 
@@ -112,6 +122,7 @@ class ProjectController extends Controller {
 		$project = Project::find($project_id);
 		$student = Project::find($project_id)->students;
 		$i = 0;
+		$arrs = ['0'=>''];
 		foreach ($student as $members ) {
 			# code...
 			$arrs[$i] = $members->name;
