@@ -202,8 +202,28 @@ class StudentController extends Controller {
   public function api_student($id)
   {
     $detail = Student::find($id);
-    return json_encode($detail);
-  }
+    $project = Student::find($id)->projects;
+    $i = 0;
+    $arrs = ['0'=>''];
+    foreach ($project as $project ) {
+      # code...
+      $arrs[$i] = $project->name;
+      $i++;
+    }
+    $arr = ['id'=> '','name'=>'','email'=>'','tel'=>'','icon'=>'','photo'=>'','github'=>'','tags'=>'','resume'=>'','description'=>'','project'=>''];
+    $arr['id']= $detail->id;
+    $arr['name'] = $detail->name;
+    $arr['email'] = $detail->email;
+    $arr['tel'] = $detail->tel;
+    $arr['icon'] = $detail->icon;
+    $arr['photo'] = $detail->photo;
+    $arr['github'] = $detail->guthub;
+    $arr['tags'] = $detail->tags;
+    $arr['resume'] = $detail->resume;
+    $arr['description'] = $detail->resume;
+    $arr['projects'] = $arrs;
+
+    return json_encode($arr);  }
 
   public function blog_add()
   {
