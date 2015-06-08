@@ -25,7 +25,7 @@ Method:GET
 
 需要参数：user_id
 
-字段：学号(id),姓名(name),头像url地址(icon),个人照片url地址(photo),邮箱(email),电话(tel),技术标签(tags),详细介绍(resume),一句话介绍(description),项目列表(project);
+字段：学号(id),姓名(name),头像url地址(icon),个人照片url地址(photo),邮箱(email),电话(tel),技术标签(tags),详细介绍(resume),一句话介绍(description),项目列表id(projects);
 
 ```
 

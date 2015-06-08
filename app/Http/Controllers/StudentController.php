@@ -207,10 +207,10 @@ class StudentController extends Controller {
     $arrs = ['0'=>''];
     foreach ($project as $project ) {
       # code...
-      $arrs[$i] = $project->name;
+      $arrs[$i] = $project->id;
       $i++;
     }
-    $arr = ['id'=> '','name'=>'','email'=>'','tel'=>'','icon'=>'','photo'=>'','github'=>'','tags'=>'','resume'=>'','description'=>'','project'=>''];
+    $arr = ['id'=> '','name'=>'','email'=>'','tel'=>'','icon'=>'','photo'=>'','github'=>'','tags'=>'','resume'=>'','description'=>'','projects'=>''];
     $arr['id']= $detail->id;
     $arr['name'] = $detail->name;
     $arr['email'] = $detail->email;
